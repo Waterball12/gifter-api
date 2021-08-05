@@ -1,0 +1,15 @@
+name: gifter-api
+region: nyc
+services:
+- dockerfile_path: Dockerfile
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: Waterball12/gifter-api
+  http_port: 80
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: gifter-api
+  routes:
+  - path: /
+  source_dir: /
